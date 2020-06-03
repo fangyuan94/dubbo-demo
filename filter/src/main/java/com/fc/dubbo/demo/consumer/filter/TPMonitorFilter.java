@@ -59,7 +59,7 @@ public class TPMonitorFilter implements Filter {
 
         @Override
         public void run() {
-
+            log.info("monitor监控==============");
             Bucket bucket = new Bucket();
             //copy新数据
             Map<String, List<Long>> newTimers = new HashMap<>(timers.size());
@@ -74,7 +74,7 @@ public class TPMonitorFilter implements Filter {
             });
             bucketQueue.add(bucket);
             //写进队列
-            if(bucketQueue.size()>30){
+            if(bucketQueue.size()>12){
                 //保证队列只有1min钟数据 这个可以动态变更 超过移除header
                 bucketQueue.poll();
             }
