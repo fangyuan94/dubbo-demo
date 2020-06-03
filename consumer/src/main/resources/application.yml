@@ -1,0 +1,24 @@
+dubbo:
+  application:
+    id: consumer1
+    name: consumer1
+    owner: fangyuan
+  registry:
+    address: localhost:2181
+    protocol: zookeeper
+    timeout: 10000
+    session: 60000
+    check: true
+  consumer:
+    ##关闭重试
+    retries: 0
+    ##超时时间
+    timeout: 3000
+    ##服务依赖检测
+    check: false
+    filter: tpMonitorFilter
+  protocol:
+    id: dubbo
+    name: dubbo
+server:
+  port: 8082

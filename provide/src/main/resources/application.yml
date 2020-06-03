@@ -1,0 +1,18 @@
+dubbo:
+  application:
+    id: provide1
+    name: provide1
+    owner: fangyuan
+  registry:
+    address: localhost:2181
+    protocol: zookeeper
+    check: true
+  provider:
+    timeout: 3000
+    filter: transportIPFilter
+  protocol:
+    port: 8083
+    id: dubbo
+    name: dubbo
+server:
+  port: 8081

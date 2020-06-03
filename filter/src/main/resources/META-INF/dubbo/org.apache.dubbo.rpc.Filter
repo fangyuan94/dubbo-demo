@@ -1,0 +1,2 @@
+transportIPFilter=com.fc.dubbo.demo.consumer.filter.TransportIPFilter
+tpMonitorFilter=com.fc.dubbo.demo.consumer.filter.TPMonitorFilter
